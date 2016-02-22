@@ -29,7 +29,7 @@ class Api::V1::CookbooksController < Api::V1Controller
       @cookbooks = @cookbooks.owned_by(params[:user])
     end
 
-    if params[:platforms].present? && !params[:platforms][0].blank?
+    if params[:platforms].present? && params[:platforms][0].present?
       @cookbooks = @cookbooks.filter_platforms(params[:platforms])
     end
   end
