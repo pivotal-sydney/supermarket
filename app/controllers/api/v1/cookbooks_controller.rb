@@ -20,6 +20,7 @@ class Api::V1::CookbooksController < Api::V1Controller
   #   GET /api/v1/cookbooks?start=5&items=15
   #   GET /api/v1/cookbooks?order=recently_updated
   #   GET /api/v1/cookbooks?user=timmy
+  #   GET /api/v1/cookbooks?platforms[]=debian
   #
   def index
     @total = Cookbook.count
