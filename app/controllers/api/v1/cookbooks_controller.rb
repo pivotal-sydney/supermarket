@@ -32,7 +32,6 @@ class Api::V1::CookbooksController < Api::V1Controller
     if params[:platforms].present? && !params[:platforms][0].blank?
       @cookbooks = @cookbooks.filter_platforms(params[:platforms])
     end
-
   end
 
   #
